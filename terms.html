@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Terms of Use - Open Baptist Hymnal</title>
+    <meta name="description" content="Terms of Use for the Open Baptist Hymnal app.">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="assets/images/obh-logo.png">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts: EB Garamond -->
+    <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet">
+    
+    <!-- Geist Font (CDN) -->
+    <link href="https://cdn.jsdelivr.net/npm/geist@1.2.1/dist/fonts/geist-sans/style.css" rel="stylesheet">
+    
+    <!-- Phosphor Icons -->
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+
+    <!-- Custom Tailwind Config -->
+    <script src="assets/js/tailwind-config.js"></script>
+    
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body class="bg-[#0a0a0a] text-slate-300 antialiased selection:bg-brand-500 selection:text-white font-sans flex flex-col min-h-screen relative">
+    <!-- Dark Dot Matrix Background -->
+    <div class="fixed inset-0 z-0 pointer-events-none" style="background-color: #0a0a0a; background-image: radial-gradient(circle at 25% 25%, #222222 0.5px, transparent 1px), radial-gradient(circle at 75% 75%, #111111 0.5px, transparent 1px); background-size: 10px 10px; image-rendering: pixelated;"></div>
+
+    <!-- Navigation -->
+    <nav class="fixed w-full bg-black/80 backdrop-blur-md border-b border-white/10 z-50">
+        <div class="max-w-6xl mx-auto px-6 h-20 flex items-center justify-between">
+            <div class="flex items-center gap-3">
+                <a href="index.html" class="flex items-center gap-3">
+                    <img src="assets/images/obh-logo.png" alt="OBH Logo" class="w-10 h-10 rounded-lg shadow-md">
+                    <span class="font-serif text-2xl font-bold text-white tracking-tight">Open Baptist Hymnal</span>
+                </a>
+            </div>
+            <div class="hidden md:flex items-center gap-8 text-sm font-medium text-slate-400">
+                <a href="index.html" class="hover:text-brand-accent-500 transition">Home</a>
+                <a href="index.html#features" class="hover:text-brand-accent-500 transition">Features</a>
+                <a href="privacy.html" class="hover:text-brand-accent-500 transition">Privacy Policy</a>
+                <a href="#" class="bg-brand-500 text-white px-5 py-2.5 rounded-full hover:bg-brand-400 transition shadow-lg shadow-brand-500/20 font-medium">Download App</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="flex-grow pt-32 pb-20 px-6 relative z-10">
+        <div class="max-w-4xl mx-auto">
+            <div class="bg-white/5 backdrop-blur-sm p-8 md:p-12 rounded-3xl shadow-sm border border-white/10">
+                <h1 class="text-4xl font-serif font-bold text-white mb-8 pb-4 border-b border-white/10">Terms of Use</h1>
+                <div class="prose prose-invert max-w-none text-slate-400 font-light">
+                    <h4 class="text-white font-bold mt-4 mb-2 text-xl font-serif">1. Agreement to Terms</h4>
+                    <p>By downloading or using the app, these terms will automatically apply to you – you should make sure therefore that you read them carefully before using the app.</p>
+
+                    <h4 class="text-white font-bold mt-8 mb-2 text-xl font-serif">2. Intellectual Property</h4>
+                    <p>The app itself, and all the trade marks, copyright, database rights and other intellectual property rights related to it, still belong to the Developer. The Hymn lyrics presented are largely in the public domain or used for religious educational purposes. If you believe any content infringes on copyright, please contact us immediately for removal.</p>
+
+                    <h4 class="text-white font-bold mt-8 mb-2 text-xl font-serif">3. Changes to This Terms and Conditions</h4>
+                    <p>We may update our Terms and Conditions from time to time. Thus, you are advised to review this page periodically for any changes.</p>
+                    
+                    <h4 class="text-white font-bold mt-8 mb-2 text-xl font-serif">4. Disclaimer</h4>
+                    <p>The app is provided "as is" without warranties of any kind. We do not guarantee that the app will function uninterrupted or error-free.</p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-black/40 text-slate-400 py-12 border-t border-white/10 relative z-10 backdrop-blur-md">
+        <div class="max-w-6xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-6">
+            <div class="flex items-center gap-2">
+                <img src="assets/images/obh-logo.png" alt="OBH Logo" class="w-8 h-8 rounded-md">
+                <span class="text-white font-serif font-bold text-lg">Open Baptist Hymnal</span>
+            </div>
+            <div class="text-sm text-slate-500 font-medium">
+                &copy; 2026. All rights reserved.
+            </div>
+            <div class="flex gap-6 text-sm font-medium">
+                <a href="mailto:davidodejobi.dev@gmail.com" class="hover:text-brand-accent-500 transition">Support</a>
+                <a href="privacy.html" class="hover:text-brand-accent-500 transition">Privacy</a>
+                <a href="terms.html" class="text-white font-bold transition">Terms</a>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
