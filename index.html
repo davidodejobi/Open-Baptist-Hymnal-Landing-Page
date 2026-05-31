@@ -3,46 +3,46 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Open Baptist Hymnal - Complete Offline Hymn Book</title>
-    <meta name="description" content="The complete offline Open Baptist Hymnal app. Worship without limits with bilingual support, instant search, and dark mode.">
-    <meta name="keywords" content="Open Baptist Hymnal, Hymn Book, Baptist Church, Christian App, Offline Hymnal, Nigerian Hymns, Worship App">
-    
+    <title>Abide — Hymns, Bible & Notes, fully offline</title>
+    <meta name="description" content="Abide is a free, open-source worship companion: the complete bilingual Baptist hymnal, a multi-edition Bible reader, sermon notes with voice recording, and shareable verse cards — all working fully offline.">
+    <meta name="keywords" content="Abide, Open Baptist Hymnal, Hymn Book, Baptist Church, Bible app, Offline Hymnal, Yoruba Hymns, Worship App, Sermon Notes, Open Source">
+
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://yorubahymnal.app/">
-    <meta property="og:title" content="Open Baptist Hymnal - Complete Offline Hymn Book">
-    <meta property="og:description" content="The complete offline Open Baptist Hymnal app. Worship without limits.">
-    <meta property="og:image" content="assets/images/obh-logo.png">
+    <meta property="og:title" content="Abide — Hymns, Bible & Notes, fully offline">
+    <meta property="og:description" content="A free, open-source worship companion. Hymns, Bible, and notes — all offline.">
+    <meta property="og:image" content="assets/images/obh-logo.webp">
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
     <meta property="twitter:url" content="https://yorubahymnal.app/">
-    <meta property="twitter:title" content="Open Baptist Hymnal - Complete Offline Hymn Book">
-    <meta property="twitter:description" content="The complete offline Open Baptist Hymnal app. Worship without limits.">
-    <meta property="twitter:image" content="assets/images/obh-logo.png">
+    <meta property="twitter:title" content="Abide — Hymns, Bible & Notes, fully offline">
+    <meta property="twitter:description" content="A free, open-source worship companion. Hymns, Bible, and notes — all offline.">
+    <meta property="twitter:image" content="assets/images/obh-logo.webp">
 
     <!-- Favicon -->
-    <link rel="icon" type="image/png" href="assets/images/obh-logo.png">
-    
+    <link rel="icon" type="image/webp" href="assets/images/obh-logo-128.webp">
+
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
-    
+
     <!-- Google Fonts: EB Garamond -->
     <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet">
-    
+
     <!-- Geist Font (CDN) -->
     <link href="https://cdn.jsdelivr.net/npm/geist@1.2.1/dist/fonts/geist-sans/style.css" rel="stylesheet">
-    
+
     <!-- Phosphor Icons -->
     <script src="https://unpkg.com/@phosphor-icons/web"></script>
 
     <!-- Custom Tailwind Config -->
     <script src="assets/js/tailwind-config.js"></script>
-    
+
     <!-- Custom Styles -->
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
-<body class="bg-[#0a0a0a] text-slate-300 antialiased selection:bg-brand-500 selection:text-white font-sans relative">
+<body class="bg-[#0a0a0a] text-slate-300 antialiased selection:bg-brand-accent-500 selection:text-black font-sans relative">
     <!-- Dark Dot Matrix Background -->
     <div class="fixed inset-0 z-0 pointer-events-none" style="background-color: #0a0a0a; background-image: radial-gradient(circle at 25% 25%, #222222 0.5px, transparent 1px), radial-gradient(circle at 75% 75%, #111111 0.5px, transparent 1px); background-size: 10px 10px; image-rendering: pixelated;"></div>
 
@@ -51,15 +51,18 @@
         <div class="max-w-6xl mx-auto px-6 h-20 flex items-center justify-between">
             <div class="flex items-center gap-3">
                 <a href="index.html" class="flex items-center gap-3">
-                    <img src="assets/images/obh-logo.png" alt="OBH Logo" class="w-10 h-10 rounded-lg shadow-md">
-                    <span class="font-serif text-2xl font-bold text-white tracking-tight">Open Baptist Hymnal</span>
+                    <img src="assets/images/obh-logo-128.webp" alt="Abide logo" class="w-10 h-10 rounded-lg shadow-md">
+                    <span class="font-serif text-2xl font-bold text-white tracking-tight">Abide</span>
                 </a>
             </div>
             <div class="hidden md:flex items-center gap-8 text-sm font-medium text-slate-400">
                 <a href="#features" class="hover:text-brand-accent-500 transition">Features</a>
-                <a href="privacy.html" class="hover:text-brand-accent-500 transition">Privacy Policy</a>
-                <a href="terms.html" class="hover:text-brand-accent-500 transition">Terms</a>
-                <a href="#" class="bg-brand-500 text-white px-5 py-2.5 rounded-full hover:bg-brand-400 transition shadow-lg shadow-brand-500/20 font-medium">Download App</a>
+                <a href="#bible" class="hover:text-brand-accent-500 transition">Bible</a>
+                <a href="#contribute" class="hover:text-brand-accent-500 transition">Contribute</a>
+                <a href="https://github.com/davidodejobi/abide" target="_blank" rel="noopener" class="flex items-center gap-1.5 hover:text-brand-accent-500 transition" aria-label="GitHub repository">
+                    <i class="ph-fill ph-github-logo text-xl"></i>
+                </a>
+                <a href="#beta" class="bg-brand-accent-500 text-black px-5 py-2.5 rounded-full hover:bg-brand-accent-600 transition shadow-lg shadow-brand-accent-500/20 font-semibold">Join the beta</a>
             </div>
         </div>
     </nav>
@@ -72,30 +75,31 @@
         </div>
 
         <div class="max-w-6xl mx-auto px-6 grid lg:grid-cols-2 gap-16 items-center">
-            
+
             <!-- Text Content -->
             <div class="text-center lg:text-left">
-                <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-brand-500/20 text-brand-100 text-xs font-bold uppercase tracking-wider mb-6 border border-brand-500/30">
+                <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-brand-accent-500/15 text-brand-accent-100 text-xs font-bold uppercase tracking-wider mb-6 border border-brand-accent-500/30">
                     <span class="w-2 h-2 rounded-full bg-brand-accent-500 animate-pulse"></span>
-                    Available Offline
+                    Open source &bull; Works offline
                 </div>
                 <h1 class="font-serif text-6xl lg:text-7xl font-semibold text-white leading-[1.1] mb-6">
-                    Worship without <br> <span class="italic text-brand-accent-500">boundaries.</span>
+                    Worship that <br> <span class="italic text-brand-accent-500">stays with you.</span>
                 </h1>
                 <p class="text-lg text-slate-400 mb-10 leading-relaxed max-w-xl mx-auto lg:mx-0 font-light">
-                    The complete bilingual hymnal for the Baptist Church. Toggle between Yoruba and English instantly, search by lyrics, and sing anywhere—no internet required.
+                    Abide brings the complete bilingual Baptist hymnal, a multi-edition Bible reader, and sermon notes into one calm, offline app. Sing, read, and reflect anywhere&mdash;no internet required.
                 </p>
-                
+
                 <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
-                    <button class="flex items-center justify-center gap-3 bg-brand-500 text-white px-8 py-4 rounded-xl hover:bg-brand-600 transition shadow-xl shadow-brand-500/20 hover:shadow-2xl hover:-translate-y-1 duration-300">
-                        <i class="ph-fill ph-google-play-logo text-2xl"></i>
+                    <a href="#beta" class="flex items-center justify-center gap-3 bg-brand-accent-500 text-black px-8 py-4 rounded-xl hover:bg-brand-accent-600 transition shadow-xl shadow-brand-accent-500/20 hover:shadow-2xl hover:-translate-y-1 duration-300 font-semibold">
+                        <i class="ph-fill ph-flask text-2xl"></i>
                         <div class="text-left">
-                            <div class="text-[10px] uppercase tracking-wider text-white/80 font-semibold">Get it on</div>
-                            <div class="text-sm font-bold leading-none">Google Play</div>
+                            <div class="text-[10px] uppercase tracking-wider text-black/70 font-bold">Coming soon</div>
+                            <div class="text-sm font-bold leading-none">Join the beta</div>
                         </div>
-                    </button>
-                    <a href="privacy.html" class="flex items-center justify-center gap-2 px-8 py-4 rounded-xl border border-white/10 text-slate-300 hover:bg-white/5 hover:border-white/20 transition font-medium">
-                        Privacy Policy
+                    </a>
+                    <a href="https://github.com/davidodejobi/abide" target="_blank" rel="noopener" class="flex items-center justify-center gap-2 px-8 py-4 rounded-xl border border-white/10 text-slate-300 hover:bg-white/5 hover:border-white/20 transition font-medium">
+                        <i class="ph-fill ph-github-logo text-xl"></i>
+                        View on GitHub
                     </a>
                 </div>
             </div>
@@ -104,16 +108,16 @@
             <div class="relative mx-auto lg:mr-0 flex justify-center items-center">
                 <div class="relative w-[320px] sm:w-[380px] h-[600px] sm:h-[700px]">
                     <!-- Back Image (Staggered) -->
-                    <img src="assets/images/app-screenshot-02.webp" alt="App Screenshot - Dark Mode" 
+                    <img src="assets/images/shot3.webp" alt="Abide hymn list with Yoruba and English toggle"
                          class="absolute top-12 -right-6 w-full h-auto rounded-[2.5rem] shadow-2xl border-[8px] border-slate-900 rotate-6 hover:rotate-2 transition-transform duration-500 ease-out z-0">
-                    
+
                     <!-- Front Image -->
-                    <img src="assets/images/app-screenshot-01.webp" alt="App Screenshot - Hymn View" 
+                    <img src="assets/images/shot4.webp" alt="Abide hymn detail with highlighted chorus"
                          class="absolute top-0 left-0 w-full h-auto rounded-[2.5rem] shadow-2xl border-[8px] border-slate-900 -rotate-3 hover:rotate-0 transition-transform duration-500 ease-out z-10">
                 </div>
-                
+
                 <!-- Decorative Elements behind -->
-                <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-brand-500/20 blur-[100px] rounded-full -z-10 pointer-events-none"></div>
+                <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-brand-accent-500/15 blur-[100px] rounded-full -z-10 pointer-events-none"></div>
             </div>
         </div>
     </header>
@@ -121,39 +125,218 @@
     <!-- Features Grid -->
     <section id="features" class="py-24 relative z-10">
         <div class="max-w-6xl mx-auto px-6">
-            <div class="grid md:grid-cols-3 gap-12">
+            <div class="text-center max-w-2xl mx-auto mb-16">
+                <h2 class="font-serif text-4xl lg:text-5xl font-semibold text-white mb-4">Everything for the service, in one place</h2>
+                <p class="text-slate-400 font-light text-lg">Built for the pew and the prayer closet alike&mdash;fast, focused, and fully usable without a signal.</p>
+            </div>
+            <div class="grid md:grid-cols-3 gap-8">
                 <!-- Feature 1 -->
-                <div class="group p-8 rounded-3xl bg-white/5 border border-white/10 hover:border-brand-accent-500/30 hover:shadow-xl hover:shadow-brand-500/10 transition duration-300 backdrop-blur-sm">
-                    <div class="w-14 h-14 bg-brand-500/20 rounded-2xl shadow-sm flex items-center justify-center mb-6 group-hover:scale-110 transition duration-300 border border-brand-accent-500/20">
+                <div class="group p-8 rounded-3xl bg-white/5 border border-white/10 hover:border-brand-accent-500/30 hover:shadow-xl hover:shadow-brand-accent-500/10 transition duration-300 backdrop-blur-sm">
+                    <div class="w-14 h-14 bg-brand-accent-500/15 rounded-2xl shadow-sm flex items-center justify-center mb-6 group-hover:scale-110 transition duration-300 border border-brand-accent-500/20">
                         <i class="ph-fill ph-wifi-slash text-3xl text-brand-accent-500"></i>
                     </div>
                     <h3 class="text-xl font-bold font-serif text-white mb-3">100% Offline</h3>
                     <p class="text-slate-400 leading-relaxed font-light">
-                        No data connection needed. Access the full library of hymns in remote areas or without using your mobile data.
+                        The full hymn and Bible library lives on your device. No data, no buffering&mdash;works in remote areas and crowded sanctuaries alike.
                     </p>
                 </div>
 
                 <!-- Feature 2 -->
-                <div class="group p-8 rounded-3xl bg-white/5 border border-white/10 hover:border-brand-accent-500/30 hover:shadow-xl hover:shadow-brand-500/10 transition duration-300 backdrop-blur-sm">
-                    <div class="w-14 h-14 bg-brand-500/20 rounded-2xl shadow-sm flex items-center justify-center mb-6 group-hover:scale-110 transition duration-300 border border-brand-accent-500/20">
+                <div class="group p-8 rounded-3xl bg-white/5 border border-white/10 hover:border-brand-accent-500/30 hover:shadow-xl hover:shadow-brand-accent-500/10 transition duration-300 backdrop-blur-sm">
+                    <div class="w-14 h-14 bg-brand-accent-500/15 rounded-2xl shadow-sm flex items-center justify-center mb-6 group-hover:scale-110 transition duration-300 border border-brand-accent-500/20">
                         <i class="ph-fill ph-translate text-3xl text-brand-accent-500"></i>
                     </div>
-                    <h3 class="text-xl font-bold font-serif text-white mb-3">Bilingual Support</h3>
+                    <h3 class="text-xl font-bold font-serif text-white mb-3">Bilingual Hymns</h3>
                     <p class="text-slate-400 leading-relaxed font-light">
-                        Seamlessly toggle between Yoruba and English versions of the same hymn to follow along in any service.
+                        Toggle any hymn between Yoruba and English instantly, or read them side by side to follow along in any service.
                     </p>
                 </div>
 
                 <!-- Feature 3 -->
-                <div class="group p-8 rounded-3xl bg-white/5 border border-white/10 hover:border-brand-accent-500/30 hover:shadow-xl hover:shadow-brand-500/10 transition duration-300 backdrop-blur-sm">
-                    <div class="w-14 h-14 bg-brand-500/20 rounded-2xl shadow-sm flex items-center justify-center mb-6 group-hover:scale-110 transition duration-300 border border-brand-accent-500/20">
-                        <i class="ph-fill ph-magnifying-glass text-3xl text-brand-accent-500"></i>
+                <div class="group p-8 rounded-3xl bg-white/5 border border-white/10 hover:border-brand-accent-500/30 hover:shadow-xl hover:shadow-brand-accent-500/10 transition duration-300 backdrop-blur-sm">
+                    <div class="w-14 h-14 bg-brand-accent-500/15 rounded-2xl shadow-sm flex items-center justify-center mb-6 group-hover:scale-110 transition duration-300 border border-brand-accent-500/20">
+                        <i class="ph-fill ph-book-open-text text-3xl text-brand-accent-500"></i>
                     </div>
-                    <h3 class="text-xl font-bold font-serif text-white mb-3">Instant Search</h3>
+                    <h3 class="text-xl font-bold font-serif text-white mb-3">Bible Reader</h3>
                     <p class="text-slate-400 leading-relaxed font-light">
-                        Find hymns instantly by number, title, or even by remembering just a single line of the lyrics.
+                        Read across editions&mdash;English KJV and Yoruba BMY&mdash;with chapter navigation that remembers exactly where you left off.
                     </p>
                 </div>
+
+                <!-- Feature 4 -->
+                <div class="group p-8 rounded-3xl bg-white/5 border border-white/10 hover:border-brand-accent-500/30 hover:shadow-xl hover:shadow-brand-accent-500/10 transition duration-300 backdrop-blur-sm">
+                    <div class="w-14 h-14 bg-brand-accent-500/15 rounded-2xl shadow-sm flex items-center justify-center mb-6 group-hover:scale-110 transition duration-300 border border-brand-accent-500/20">
+                        <i class="ph-fill ph-microphone text-3xl text-brand-accent-500"></i>
+                    </div>
+                    <h3 class="text-xl font-bold font-serif text-white mb-3">Notes &amp; Voice Notes</h3>
+                    <p class="text-slate-400 leading-relaxed font-light">
+                        Capture sermon notes in a rich editor and record voice memos inline&mdash;tag and organize them so nothing slips away.
+                    </p>
+                </div>
+
+                <!-- Feature 5 -->
+                <div class="group p-8 rounded-3xl bg-white/5 border border-white/10 hover:border-brand-accent-500/30 hover:shadow-xl hover:shadow-brand-accent-500/10 transition duration-300 backdrop-blur-sm">
+                    <div class="w-14 h-14 bg-brand-accent-500/15 rounded-2xl shadow-sm flex items-center justify-center mb-6 group-hover:scale-110 transition duration-300 border border-brand-accent-500/20">
+                        <i class="ph-fill ph-image-square text-3xl text-brand-accent-500"></i>
+                    </div>
+                    <h3 class="text-xl font-bold font-serif text-white mb-3">Share as Image</h3>
+                    <p class="text-slate-400 leading-relaxed font-light">
+                        Turn a stanza or favorite verse into a beautiful card in your chosen color and share it to any chat in a tap.
+                    </p>
+                </div>
+
+                <!-- Feature 6 -->
+                <div class="group p-8 rounded-3xl bg-white/5 border border-white/10 hover:border-brand-accent-500/30 hover:shadow-xl hover:shadow-brand-accent-500/10 transition duration-300 backdrop-blur-sm">
+                    <div class="w-14 h-14 bg-brand-accent-500/15 rounded-2xl shadow-sm flex items-center justify-center mb-6 group-hover:scale-110 transition duration-300 border border-brand-accent-500/20">
+                        <i class="ph-fill ph-sliders-horizontal text-3xl text-brand-accent-500"></i>
+                    </div>
+                    <h3 class="text-xl font-bold font-serif text-white mb-3">Made Yours</h3>
+                    <p class="text-slate-400 leading-relaxed font-light">
+                        Light, dark, or system theme, adjustable font size for easy reading, and a default language that fits how you worship.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Bible Section -->
+    <section id="bible" class="py-24 relative z-10">
+        <div class="max-w-6xl mx-auto px-6 grid lg:grid-cols-2 gap-16 items-center">
+            <div class="order-2 lg:order-1">
+                <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-brand-accent-500/15 text-brand-accent-100 text-xs font-bold uppercase tracking-wider mb-6 border border-brand-accent-500/30">
+                    The Word, always near
+                </div>
+                <h2 class="font-serif text-4xl lg:text-5xl font-semibold text-white leading-tight mb-6">A Bible reader that meets you where you worship</h2>
+                <p class="text-lg text-slate-400 mb-6 leading-relaxed font-light">
+                    Switch between English (KJV) and Yoruba (BMY) editions in a tap. Abide keeps your place&mdash;edition, book, and chapter&mdash;so you open right where you stopped.
+                </p>
+                <ul class="space-y-3 text-slate-300">
+                    <li class="flex items-start gap-3"><i class="ph-fill ph-check-circle text-xl text-brand-accent-500 mt-0.5"></i> Multi-edition reading, fully offline</li>
+                    <li class="flex items-start gap-3"><i class="ph-fill ph-check-circle text-xl text-brand-accent-500 mt-0.5"></i> Select verses and share them as image cards</li>
+                    <li class="flex items-start gap-3"><i class="ph-fill ph-check-circle text-xl text-brand-accent-500 mt-0.5"></i> Comfortable typography with adjustable size</li>
+                </ul>
+            </div>
+            <div class="order-1 lg:order-2 flex justify-center">
+                <div class="relative w-[300px] sm:w-[340px]">
+                    <div class="absolute inset-0 bg-brand-accent-500/15 blur-[90px] rounded-full -z-10"></div>
+                    <img src="assets/images/shot1.webp" alt="Abide Bible reader showing Psalms 1 in KJV" class="w-full h-auto rounded-[2.5rem] shadow-2xl border-[8px] border-slate-900">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Notes Section -->
+    <section id="notes" class="py-24 relative z-10">
+        <div class="max-w-6xl mx-auto px-6 grid lg:grid-cols-2 gap-16 items-center">
+            <div class="flex justify-center">
+                <div class="relative w-[300px] sm:w-[340px]">
+                    <div class="absolute inset-0 bg-brand-500/25 blur-[90px] rounded-full -z-10"></div>
+                    <img src="assets/images/shot6.webp" alt="Abide recording a voice note inside a sermon note" class="w-full h-auto rounded-[2.5rem] shadow-2xl border-[8px] border-slate-900">
+                </div>
+            </div>
+            <div>
+                <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-brand-accent-500/15 text-brand-accent-100 text-xs font-bold uppercase tracking-wider mb-6 border border-brand-accent-500/30">
+                    Don't lose the message
+                </div>
+                <h2 class="font-serif text-4xl lg:text-5xl font-semibold text-white leading-tight mb-6">Sermon notes, written or spoken</h2>
+                <p class="text-lg text-slate-400 mb-6 leading-relaxed font-light">
+                    Type your reflections in a clean editor, or hit record and drop a voice memo straight into the note. Organize everything with folders and tags so Sunday's message is there when you need it.
+                </p>
+                <ul class="space-y-3 text-slate-300">
+                    <li class="flex items-start gap-3"><i class="ph-fill ph-check-circle text-xl text-brand-accent-500 mt-0.5"></i> Rich text notes, stored on-device</li>
+                    <li class="flex items-start gap-3"><i class="ph-fill ph-check-circle text-xl text-brand-accent-500 mt-0.5"></i> Inline voice recording with one tap</li>
+                    <li class="flex items-start gap-3"><i class="ph-fill ph-check-circle text-xl text-brand-accent-500 mt-0.5"></i> Folders and tags to keep it tidy</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Beta / Volunteer Signup -->
+    <section id="beta" class="py-24 relative z-10">
+        <div class="max-w-3xl mx-auto px-6">
+            <div class="rounded-3xl bg-gradient-to-b from-brand-500/30 to-white/5 border border-brand-accent-500/20 p-8 sm:p-12 backdrop-blur-sm">
+                <div class="text-center mb-8">
+                    <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-brand-accent-500/15 text-brand-accent-100 text-xs font-bold uppercase tracking-wider mb-5 border border-brand-accent-500/30">
+                        <span class="w-2 h-2 rounded-full bg-brand-accent-500 animate-pulse"></span>
+                        Beta testers wanted
+                    </div>
+                    <h2 class="font-serif text-4xl lg:text-5xl font-semibold text-white mb-4">Help test Abide before launch</h2>
+                    <p class="text-slate-400 font-light text-lg">
+                        Abide isn't on the store yet. Leave your email to join the early testing group&mdash;you'll get builds first and help shape what ships.
+                    </p>
+                </div>
+
+                <form id="beta-form" class="space-y-4">
+                    <div class="grid sm:grid-cols-2 gap-4">
+                        <div>
+                            <label for="bf-name" class="block text-sm font-medium text-slate-300 mb-1.5">Name</label>
+                            <input id="bf-name" name="name" type="text" autocomplete="name"
+                                class="w-full px-4 py-3 rounded-xl bg-black/40 border border-white/10 text-white placeholder-slate-500 focus:outline-none focus:border-brand-accent-500/60 focus:ring-2 focus:ring-brand-accent-500/20 transition"
+                                placeholder="Your name">
+                        </div>
+                        <div>
+                            <label for="bf-email" class="block text-sm font-medium text-slate-300 mb-1.5">Email <span class="text-brand-accent-500">*</span></label>
+                            <input id="bf-email" name="email" type="email" required autocomplete="email"
+                                class="w-full px-4 py-3 rounded-xl bg-black/40 border border-white/10 text-white placeholder-slate-500 focus:outline-none focus:border-brand-accent-500/60 focus:ring-2 focus:ring-brand-accent-500/20 transition"
+                                placeholder="you@example.com">
+                        </div>
+                    </div>
+                    <div>
+                        <label for="bf-message" class="block text-sm font-medium text-slate-300 mb-1.5">Thoughts about the app <span class="text-slate-500 font-normal">(optional)</span></label>
+                        <textarea id="bf-message" name="message" rows="3"
+                            class="w-full px-4 py-3 rounded-xl bg-black/40 border border-white/10 text-white placeholder-slate-500 focus:outline-none focus:border-brand-accent-500/60 focus:ring-2 focus:ring-brand-accent-500/20 transition resize-none"
+                            placeholder="What would you love to see in Abide?"></textarea>
+                    </div>
+                    <button type="submit" id="bf-submit"
+                        class="w-full flex items-center justify-center gap-2 bg-brand-accent-500 text-black px-8 py-4 rounded-xl hover:bg-brand-accent-600 transition shadow-xl shadow-brand-accent-500/20 font-semibold disabled:opacity-60 disabled:cursor-not-allowed">
+                        <span id="bf-submit-label">Count me in</span>
+                        <i class="ph-fill ph-arrow-right text-xl"></i>
+                    </button>
+                    <p id="bf-status" class="text-center text-sm hidden"></p>
+                    <p class="text-center text-xs text-slate-500">We'll only email you about the Abide beta. No spam, unsubscribe anytime.</p>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contribute / Open Source -->
+    <section id="contribute" class="py-24 relative z-10">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="text-center max-w-2xl mx-auto mb-14">
+                <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-brand-accent-500/15 text-brand-accent-100 text-xs font-bold uppercase tracking-wider mb-5 border border-brand-accent-500/30">
+                    <i class="ph-fill ph-git-branch"></i> Open source
+                </div>
+                <h2 class="font-serif text-4xl lg:text-5xl font-semibold text-white mb-4">Built in the open, every weekend</h2>
+                <p class="text-slate-400 font-light text-lg">
+                    Abide is a free, open-source project I work on each weekend. Whether you write code, design, or just have an idea&mdash;there's room for you.
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8 mb-12">
+                <div class="p-8 rounded-3xl bg-white/5 border border-white/10 text-center">
+                    <i class="ph-fill ph-code text-4xl text-brand-accent-500 mb-4 inline-block"></i>
+                    <h3 class="text-xl font-bold font-serif text-white mb-2">Developers</h3>
+                    <p class="text-slate-400 leading-relaxed font-light">Flutter, Riverpod, clean architecture. Pick up an issue and ship a feature or fix.</p>
+                </div>
+                <div class="p-8 rounded-3xl bg-white/5 border border-white/10 text-center">
+                    <i class="ph-fill ph-pen-nib text-4xl text-brand-accent-500 mb-4 inline-block"></i>
+                    <h3 class="text-xl font-bold font-serif text-white mb-2">Designers</h3>
+                    <p class="text-slate-400 leading-relaxed font-light">UI/UX and graphic designers&mdash;help refine screens, icons, and share cards.</p>
+                </div>
+                <div class="p-8 rounded-3xl bg-white/5 border border-white/10 text-center">
+                    <i class="ph-fill ph-lightbulb text-4xl text-brand-accent-500 mb-4 inline-block"></i>
+                    <h3 class="text-xl font-bold font-serif text-white mb-2">Idea people</h3>
+                    <p class="text-slate-400 leading-relaxed font-light">Got a feature in mind? Open an issue and let's talk it through.</p>
+                </div>
+            </div>
+
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="https://github.com/davidodejobi/abide" target="_blank" rel="noopener" class="flex items-center justify-center gap-2 bg-white text-black px-8 py-4 rounded-xl hover:bg-slate-200 transition font-semibold">
+                    <i class="ph-fill ph-star text-xl"></i> Star on GitHub
+                </a>
+                <a href="https://github.com/davidodejobi/abide/issues/new" target="_blank" rel="noopener" class="flex items-center justify-center gap-2 px-8 py-4 rounded-xl border border-white/10 text-slate-300 hover:bg-white/5 hover:border-white/20 transition font-medium">
+                    <i class="ph-fill ph-plus-circle text-xl"></i> Open an issue
+                </a>
             </div>
         </div>
     </section>
@@ -162,19 +345,77 @@
     <footer class="bg-black/40 text-slate-400 py-12 border-t border-white/10 relative z-10 backdrop-blur-md">
         <div class="max-w-6xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-6">
             <div class="flex items-center gap-2">
-                <img src="assets/images/obh-logo.png" alt="OBH Logo" class="w-8 h-8 rounded-md">
-                <span class="text-white font-serif font-bold text-lg">Open Baptist Hymnal</span>
+                <img src="assets/images/obh-logo-128.webp" alt="Abide logo" class="w-8 h-8 rounded-md">
+                <span class="text-white font-serif font-bold text-lg">Abide</span>
             </div>
             <div class="text-sm text-slate-500 font-medium">
-                &copy; 2026. All rights reserved.
+                &copy; 2026 Abide. All rights reserved.
             </div>
-            <div class="flex gap-6 text-sm font-medium">
+            <div class="flex gap-6 text-sm font-medium items-center">
+                <a href="https://github.com/davidodejobi/abide" target="_blank" rel="noopener" class="hover:text-brand-accent-500 transition" aria-label="GitHub"><i class="ph-fill ph-github-logo text-lg"></i></a>
                 <a href="mailto:davidodejobi.dev@gmail.com" class="hover:text-brand-accent-500 transition">Support</a>
                 <a href="privacy.html" class="hover:text-brand-accent-500 transition">Privacy</a>
                 <a href="terms.html" class="hover:text-brand-accent-500 transition">Terms</a>
             </div>
         </div>
     </footer>
+
+    <!-- Beta form submission -->
+    <script>
+        // Paste your deployed Apps Script Web App URL here (see apps-script/README.md)
+        const ABIDE_FORM_ENDPOINT = "https://script.google.com/macros/s/AKfycbwAZbEdNOGjoroPrSMt8I50t9XlIW4xFZ9NxmSrvh3BAMmmmUbqpHDKLApAsu8UCtgo/exec";
+
+        (function () {
+            const form = document.getElementById("beta-form");
+            const statusEl = document.getElementById("bf-status");
+            const submitBtn = document.getElementById("bf-submit");
+            const submitLabel = document.getElementById("bf-submit-label");
+
+            function setStatus(message, kind) {
+                statusEl.textContent = message;
+                statusEl.classList.remove("hidden", "text-brand-accent-500", "text-red-400", "text-emerald-400");
+                statusEl.classList.add(kind === "error" ? "text-red-400" : "text-emerald-400");
+            }
+
+            form.addEventListener("submit", async function (e) {
+                e.preventDefault();
+                const data = {
+                    name: form.name.value.trim(),
+                    email: form.email.value.trim(),
+                    message: form.message.value.trim()
+                };
+                if (!data.email) { setStatus("Please enter your email.", "error"); return; }
+
+                submitBtn.disabled = true;
+                submitLabel.textContent = "Sending…";
+
+                if (!ABIDE_FORM_ENDPOINT || ABIDE_FORM_ENDPOINT === "REPLACE_ME") {
+                    setStatus("Form endpoint isn't configured yet. Add your Apps Script URL to enable submissions.", "error");
+                    submitBtn.disabled = false;
+                    submitLabel.textContent = "Count me in";
+                    return;
+                }
+
+                try {
+                    await fetch(ABIDE_FORM_ENDPOINT, {
+                        method: "POST",
+                        mode: "no-cors",
+                        headers: { "Content-Type": "text/plain;charset=utf-8" },
+                        body: JSON.stringify({ row: data })
+                    });
+                    // no-cors responses are opaque; assume success if no network error.
+                    form.reset();
+                    setStatus("You're on the list — thank you! We'll be in touch about the beta.", "success");
+                    submitLabel.textContent = "Count me in";
+                } catch (err) {
+                    setStatus("Something went wrong. Please try again or email us directly.", "error");
+                    submitLabel.textContent = "Count me in";
+                } finally {
+                    submitBtn.disabled = false;
+                }
+            });
+        })();
+    </script>
 
 </body>
 </html>
