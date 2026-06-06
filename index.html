@@ -458,16 +458,23 @@
                 }
 
                 try {
-                    await fetch(ABIDE_FORM_ENDPOINT, {
+                    // Keep Content-Type as text/plain so the request stays a CORS
+                    // "simple request" and the browser sends no preflight (Apps Script
+                    // can't answer one). With mode:"cors" we can read the JSON the
+                    // script returns and report the real result.
+                    const res = await fetch(ABIDE_FORM_ENDPOINT, {
                         method: "POST",
-                        mode: "no-cors",
+                        mode: "cors",
                         headers: { "Content-Type": "text/plain;charset=utf-8" },
                         body: JSON.stringify({ row: data })
                     });
-                    // no-cors responses are opaque; assume success if no network error.
+                    const result = await res.json();
+                    if (!res.ok || !result || result.ok !== true) {
+                        throw new Error(result && result.error ? result.error : "Submission failed");
+                    }
                     showSuccess();
                 } catch (err) {
-                    setStatus("Something went wrong. Please try again or email us directly.", "error");
+                    setStatus("Something went wrong. Please try again, or email talk2engineerdavid@gmail.com directly.", "error");
                     submitLabel.textContent = "Count me in";
                     submitBtn.disabled = false;
                 }
