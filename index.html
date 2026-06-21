@@ -4,25 +4,30 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Abide: Hymns, Bible & Notes, fully offline</title>
-    <meta name="description" content="Abide is a free, open-source worship companion: a growing library of songs and hymns, a multi-edition Bible reader, sermon notes with voice recording, and shareable verse cards, all working fully offline.">
-    <meta name="keywords" content="Abide, Worship Songs, Hymn Book, Christian Songs, Bible app, Offline Hymnal, Yoruba Hymns, Worship App, Sermon Notes, Open Source">
+    <meta name="description" content="Abide is a free, open-source worship companion: a growing library of songs and hymns, a multi-edition Bible reader with one-tap side-by-side bilingual reading, sermon notes with voice recording, and shareable verse cards, all working fully offline.">
+    <meta name="keywords" content="Abide, Worship Songs, Hymn Book, Christian Songs, Bible app, Offline Hymnal, Yoruba Hymns, Bilingual Bible, Side by Side Bible, Worship App, Sermon Notes, Open Source">
 
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://abide-app-open.vercel.app/">
     <meta property="og:title" content="Abide: Hymns, Bible & Notes, fully offline">
-    <meta property="og:description" content="A free, open-source worship companion. Hymns, Bible, and notes, all offline.">
+    <meta property="og:description" content="A free, open-source worship companion. Hymns, Bible, and notes — read side by side in Yoruba and English, all offline.">
     <meta property="og:image" content="assets/images/obh-logo.webp">
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
     <meta property="twitter:url" content="https://abide-app-open.vercel.app/">
     <meta property="twitter:title" content="Abide: Hymns, Bible & Notes, fully offline">
-    <meta property="twitter:description" content="A free, open-source worship companion. Hymns, Bible, and notes, all offline.">
+    <meta property="twitter:description" content="A free, open-source worship companion. Hymns, Bible, and notes — read side by side in Yoruba and English, all offline.">
     <meta property="twitter:image" content="assets/images/obh-logo.webp">
 
-    <!-- Favicon -->
-    <link rel="icon" type="image/webp" href="assets/images/obh-logo-128.webp">
+    <!-- Favicons -->
+    <link rel="icon" type="image/x-icon" href="assets/images/favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon-32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicon-16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/images/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="assets/images/icon-192.png">
+    <link rel="icon" type="image/png" sizes="512x512" href="assets/images/icon-512.png">
 
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
@@ -86,7 +91,7 @@
                     Worship that <br> <span class="italic text-brand-accent-500">stays with you.</span>
                 </h1>
                 <p class="text-lg text-slate-400 mb-10 leading-relaxed max-w-xl mx-auto lg:mx-0 font-light">
-                    Abide brings a growing library of songs and hymns, a multi-edition Bible reader, and sermon notes into one calm, offline app. Sing, read, and reflect anywhere, no internet required.
+                    Abide brings a growing library of songs and hymns, a multi-edition Bible reader, and sermon notes into one calm, offline app. Read side by side in Yoruba and English, sing along, and reflect anywhere, no internet required.
                 </p>
 
                 <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
@@ -108,11 +113,11 @@
             <div class="relative mx-auto lg:mr-0 flex justify-center items-center">
                 <div class="relative w-[320px] sm:w-[380px] h-[600px] sm:h-[700px]">
                     <!-- Back Image (Staggered) -->
-                    <img src="assets/images/shot3.webp" alt="Abide hymn list with Yoruba and English toggle"
+                    <img src="assets/images/shot3.webp" alt="Abide Settings: light, dark, system theme and font size"
                          class="absolute top-12 -right-6 w-full h-auto rounded-[2.5rem] shadow-2xl border-[8px] border-slate-900 rotate-6 hover:rotate-2 transition-transform duration-500 ease-out z-0">
 
                     <!-- Front Image -->
-                    <img src="assets/images/shot4.webp" alt="Abide hymn detail with highlighted chorus"
+                    <img src="assets/images/shot4.webp" alt="Abide hymn in split view with Yoruba and English side by side"
                          class="absolute top-0 left-0 w-full h-auto rounded-[2.5rem] shadow-2xl border-[8px] border-slate-900 -rotate-3 hover:rotate-0 transition-transform duration-500 ease-out z-10">
                 </div>
 
@@ -146,9 +151,9 @@
                     <div class="w-14 h-14 bg-brand-accent-500/15 rounded-2xl shadow-sm flex items-center justify-center mb-6 group-hover:scale-110 transition duration-300 border border-brand-accent-500/20">
                         <i class="ph-fill ph-translate text-3xl text-brand-accent-500"></i>
                     </div>
-                    <h3 class="text-xl font-bold font-serif text-white mb-3">Bilingual Hymns</h3>
+                    <h3 class="text-xl font-bold font-serif text-white mb-3">Side-by-Side Reading</h3>
                     <p class="text-slate-400 leading-relaxed font-light">
-                        Toggle any hymn between Yoruba and English instantly, or read them side by side to follow along in any service.
+                        Tap split on any hymn or chapter and the other language opens beside it in one move. Flip between side by side and stacked to match how you read.
                     </p>
                 </div>
 
@@ -159,7 +164,7 @@
                     </div>
                     <h3 class="text-xl font-bold font-serif text-white mb-3">Bible Reader</h3>
                     <p class="text-slate-400 leading-relaxed font-light">
-                        Read across editions like English KJV and Yoruba BMY, with chapter navigation that remembers exactly where you left off.
+                        Read English KJV and Yoruba BMY in one place, side by side when you want to compare. Chapter navigation remembers exactly where you left off.
                     </p>
                 </div>
 
@@ -208,9 +213,10 @@
                 </div>
                 <h2 class="font-serif text-4xl lg:text-5xl font-semibold text-white leading-tight mb-6">A Bible reader that meets you where you worship</h2>
                 <p class="text-lg text-slate-400 mb-6 leading-relaxed font-light">
-                    Switch between English (KJV) and Yoruba (BMY) editions in a tap. Abide keeps your place, including edition, book, and chapter, so you open right where you stopped.
+                    Read English (KJV) and Yoruba (BMY) side by side in a single tap, or switch any chapter to stacked when you want one above the other. Abide keeps your place across editions, books, and chapters, so you open right where you stopped.
                 </p>
                 <ul class="space-y-3 text-slate-300">
+                    <li class="flex items-start gap-3"><i class="ph-fill ph-check-circle text-xl text-brand-accent-500 mt-0.5"></i> One-tap split view, side by side or stacked</li>
                     <li class="flex items-start gap-3"><i class="ph-fill ph-check-circle text-xl text-brand-accent-500 mt-0.5"></i> Multi-edition reading, fully offline</li>
                     <li class="flex items-start gap-3"><i class="ph-fill ph-check-circle text-xl text-brand-accent-500 mt-0.5"></i> Select verses and share them as image cards</li>
                     <li class="flex items-start gap-3"><i class="ph-fill ph-check-circle text-xl text-brand-accent-500 mt-0.5"></i> Comfortable typography with adjustable size</li>
@@ -219,7 +225,7 @@
             <div class="order-1 lg:order-2 flex justify-center">
                 <div class="relative w-[300px] sm:w-[340px]">
                     <div class="absolute inset-0 bg-brand-accent-500/15 blur-[90px] rounded-full -z-10"></div>
-                    <img src="assets/images/shot1.webp" alt="Abide Bible reader showing Psalms 1 in KJV" class="w-full h-auto rounded-[2.5rem] shadow-2xl border-[8px] border-slate-900">
+                    <img src="assets/images/shot1.webp" alt="Abide Bible reader showing Genesis 1 side by side in English and Yoruba" class="w-full h-auto rounded-[2.5rem] shadow-2xl border-[8px] border-slate-900">
                 </div>
             </div>
         </div>
