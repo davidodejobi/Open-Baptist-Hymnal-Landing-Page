@@ -352,7 +352,42 @@
                         <i class="ph-fill ph-google-play-logo text-xl"></i>
                         Open Play Store
                     </a>
+
+                    <div class="mt-8 pt-6 border-t border-white/10 max-w-md mx-auto">
+                        <p class="text-slate-300 font-light mb-4">
+                            One more thing &mdash; join our WhatsApp group to share feedback, ask questions, and hear about updates first.
+                        </p>
+                        <a href="https://chat.whatsapp.com/Evw3QF15LVOK0lnyCAInbe?mode=gi_t" target="_blank" rel="noopener"
+                            class="inline-flex items-center justify-center gap-2 bg-[#25D366] text-black px-6 py-3 rounded-xl hover:bg-[#1ebe57] transition shadow-xl shadow-[#25D366]/20 font-semibold">
+                            <i class="ph-fill ph-whatsapp-logo text-xl"></i>
+                            Join the WhatsApp group
+                        </a>
+                    </div>
                 </div>
+            </div>
+        </div>
+
+        <!-- WhatsApp group popup (shown after successful beta registration) -->
+        <div id="bf-whatsapp-modal" class="hidden fixed inset-0 z-[100] items-center justify-center p-4 bg-black/70 backdrop-blur-sm" role="dialog" aria-modal="true" aria-labelledby="bf-wa-title">
+            <div class="relative w-full max-w-md bg-slate-900 border border-white/10 rounded-3xl p-8 shadow-2xl text-center">
+                <button type="button" id="bf-wa-close" class="absolute top-4 right-4 w-9 h-9 inline-flex items-center justify-center rounded-full bg-white/5 hover:bg-white/10 text-slate-300 transition" aria-label="Close">
+                    <i class="ph-fill ph-x text-base"></i>
+                </button>
+                <div class="inline-flex items-center justify-center w-14 h-14 rounded-full bg-[#25D366]/15 border border-[#25D366]/30 mb-5">
+                    <i class="ph-fill ph-whatsapp-logo text-3xl text-[#25D366]"></i>
+                </div>
+                <h3 id="bf-wa-title" class="font-serif text-2xl font-semibold text-white mb-3">You're in. One more step?</h3>
+                <p class="text-slate-400 font-light mb-6">
+                    Join our WhatsApp group to share direct feedback, report bugs, and hear about updates as we roll them out.
+                </p>
+                <a href="https://chat.whatsapp.com/Evw3QF15LVOK0lnyCAInbe?mode=gi_t" target="_blank" rel="noopener" id="bf-wa-join"
+                    class="inline-flex w-full items-center justify-center gap-2 bg-[#25D366] text-black px-6 py-3 rounded-xl hover:bg-[#1ebe57] transition shadow-xl shadow-[#25D366]/20 font-semibold">
+                    <i class="ph-fill ph-whatsapp-logo text-xl"></i>
+                    Join the WhatsApp group
+                </a>
+                <button type="button" id="bf-wa-skip" class="block mx-auto mt-4 text-sm text-slate-400 hover:text-slate-200 transition">
+                    Maybe later
+                </button>
             </div>
         </div>
     </section>
@@ -436,10 +471,42 @@
                 statusEl.classList.add(kind === "error" ? "text-red-400" : "text-emerald-400");
             }
 
+            const waModal = document.getElementById("bf-whatsapp-modal");
+            const waClose = document.getElementById("bf-wa-close");
+            const waSkip = document.getElementById("bf-wa-skip");
+            const waJoin = document.getElementById("bf-wa-join");
+
+            function openWhatsAppModal() {
+                if (!waModal) return;
+                waModal.classList.remove("hidden");
+                waModal.classList.add("flex");
+                document.body.style.overflow = "hidden";
+            }
+            function closeWhatsAppModal() {
+                if (!waModal) return;
+                waModal.classList.add("hidden");
+                waModal.classList.remove("flex");
+                document.body.style.overflow = "";
+            }
+            if (waClose) waClose.addEventListener("click", closeWhatsAppModal);
+            if (waSkip) waSkip.addEventListener("click", closeWhatsAppModal);
+            if (waJoin) waJoin.addEventListener("click", closeWhatsAppModal);
+            if (waModal) {
+                waModal.addEventListener("click", function (e) {
+                    if (e.target === waModal) closeWhatsAppModal();
+                });
+            }
+            document.addEventListener("keydown", function (e) {
+                if (e.key === "Escape" && waModal && !waModal.classList.contains("hidden")) {
+                    closeWhatsAppModal();
+                }
+            });
+
             function showSuccess() {
                 form.classList.add("hidden");
                 successEl.classList.remove("hidden");
                 successEl.scrollIntoView({ behavior: "smooth", block: "center" });
+                setTimeout(openWhatsAppModal, 400);
             }
 
             form.addEventListener("submit", async function (e) {
